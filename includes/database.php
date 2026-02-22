@@ -73,7 +73,6 @@ class Database {
     }
 }
 
-// Helper function to get database connection
 function getDB() {
     return Database::getInstance()->getConnection();
 }

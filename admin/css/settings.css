@@ -1,0 +1,158 @@
+       .settings-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn:hover {
+            background: #333;
+            color: white;
+        }
+        
+        .tab-btn.active {
+            background: #e50914;
+            color: white;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        
+        .tab-pane h3 {
+            margin-bottom: 20px;
+            color: #e50914;
+        }
+        
+        .settings-group {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .current-file {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .payment-gateways {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .gateway-item {
+            background: #0f0f0f;
+            padding: 10px;
+            border-radius: 6px;
+            opacity: 0.7;
+        }
+        
+        .gateway-item input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        .warning-text {
+            color: #ff9800;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .code-editor {
+            font-family: 'Courier New', monospace;
+            background: #0f0f0f;
+        }
+        
+        .system-info {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .info-row {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            width: 200px;
+            color: #999;
+        }
+        
+        .info-value {
+            flex: 1;
+            color: white;
+        }
+        
+        .form-actions {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            display: flex;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .info-label {
+                width: auto;
+            }
+        }

@@ -1,0 +1,138 @@
+      .view-toggle {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .view-btn {
+            padding: 8px 16px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .view-btn.active {
+            background: #e50914;
+            border-color: #e50914;
+        }
+        
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .series-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .series-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .series-poster {
+            position: relative;
+            aspect-ratio: 2/3;
+            overflow: hidden;
+        }
+        
+        .series-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .poster-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        .series-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .series-card:hover .series-overlay {
+            transform: translateY(0);
+        }
+        
+        .overlay-btn {
+            flex: 1;
+            padding: 8px;
+            background: #e50914;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .series-info {
+            padding: 15px;
+        }
+        
+        .series-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .series-meta {
+            display: flex;
+            gap: 10px;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        
+        .series-genre {
+            font-size: 12px;
+            color: #e50914;
+            margin-bottom: 8px;
+        }
+        
+        .series-rating {
+            font-size: 12px;
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+        
+        .series-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .action-link {
+            color: #999;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .action-link:hover {
+            color: #e50914;
+        }
+        
+        .action-link.delete:hover {
+            color: #f44336;
+        }

@@ -1,0 +1,144 @@
+       .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            background: #e50914;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .status-badge.active {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .status-badge.trial {
+            background: #ff9800;
+            color: black;
+        }
+        
+        .status-badge.suspended {
+            background: #f44336;
+            color: white;
+        }
+        
+        .status-badge.expired {
+            background: #9e9e9e;
+            color: white;
+        }
+        
+        .plan-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .plan-badge.basic {
+            background: #2196f3;
+            color: white;
+        }
+        
+        .plan-badge.standard {
+            background: #9c27b0;
+            color: white;
+        }
+        
+        .plan-badge.premium {
+            background: #ffd700;
+            color: black;
+        }
+        
+        .plan-badge.none {
+            background: #666;
+            color: white;
+        }
+        
+        .days-left {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #333;
+        }
+        
+        .days-left.positive {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .days-left.expired {
+            background: #f44336;
+            color: white;
+        }
+        
+        .activity-stats {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .plan-distribution {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .plan-distribution h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .plan-bar-item {
+            margin-bottom: 15px;
+        }
+        
+        .plan-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .progress-bar {
+            height: 30px;
+            background: #333;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #2196f3;
+            color: white;
+            font-size: 12px;
+            line-height: 30px;
+            padding-left: 15px;
+            white-space: nowrap;
+        }
+        
+        .progress-fill.standard {
+            background: #9c27b0;
+        }
+        
+        .progress-fill.premium {
+            background: #ffd700;
+            color: black;
+        }

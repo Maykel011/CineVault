@@ -12,7 +12,7 @@ $auth = new Auth();
 $user = $auth->getCurrentUser();
 $db = getDB();
 
-// Get user's subscription details
+// user subscription query
 $subQuery = "SELECT us.*, sp.plan_name, sp.resolution, sp.screens 
              FROM user_subscriptions us 
              JOIN subscription_plans sp ON us.plan_id = sp.id 
@@ -23,7 +23,7 @@ $stmt->bind_param("i", $user['id']);
 $stmt->execute();
 $subscription = $stmt->get_result()->fetch_assoc();
 
-// Calculate days left in trial
+// trial calculation
 $today = new DateTime();
 $trialEnd = new DateTime($user['trial_end']);
 $trialDaysLeft = $today->diff($trialEnd)->days;
@@ -36,6 +36,9 @@ $trialPercentage = ($trialDaysLeft / TRIAL_DAYS) * 100;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineVault - Your Dashboard</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+
+ <!-- thsi is for user css  <link rel="stylesheet" href="../assets/css/userdashboard.css"> -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -65,7 +68,6 @@ $trialPercentage = ($trialDaysLeft / TRIAL_DAYS) * 100;
     </nav>
     
     <main class="dashboard">
-        <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
                 <h1>Welcome back, <?php echo htmlspecialchars($user['username']); ?>!</h1>
@@ -88,7 +90,6 @@ $trialPercentage = ($trialDaysLeft / TRIAL_DAYS) * 100;
             </div>
         </section>
         
-        <!-- Subscription Status Card -->
         <?php if ($subscription): ?>
         <section class="subscription-card">
             <div class="card-header">
@@ -111,11 +112,10 @@ $trialPercentage = ($trialDaysLeft / TRIAL_DAYS) * 100;
         </section>
         <?php endif; ?>
         
-        <!-- Content Rows -->
+
         <section class="content-row">
             <h2>Trending Now</h2>
             <div class="movie-grid">
-                <!-- Movie cards would be dynamically loaded here -->
                 <div class="movie-card">
                     <div class="movie-placeholder"></div>
                     <div class="movie-info">
@@ -123,7 +123,7 @@ $trialPercentage = ($trialDaysLeft / TRIAL_DAYS) * 100;
                         <p>2024</p>
                     </div>
                 </div>
-                <!-- Repeat for more movies -->
+                <!-- Repeat for more movies hindi pa tapos -->
             </div>
         </section>
         

@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_admin'])) {
     $role = $_POST['role'];
     $full_name = $_POST['full_name'];
     
-    // Check if username or email already exists
+    // tsek if username or email already exists
     $checkQuery = "SELECT id FROM admin_users WHERE username = ? OR email = ?";
     $checkStmt = $db->prepare($checkQuery);
     $checkStmt->bind_param("ss", $username, $email);
@@ -202,16 +202,7 @@ $logsQuery = "SELECT al.*, au.username
               LIMIT 50";
 $logs = $db->query($logsQuery);
 
-// If admin_logs table doesn't exist, create it
-$db->query("CREATE TABLE IF NOT EXISTS admin_logs (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    admin_id INT NOT NULL,
-    action VARCHAR(50) NOT NULL,
-    details TEXT,
-    ip_address VARCHAR(45),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (admin_id) REFERENCES admin_users(id) ON DELETE CASCADE
-)");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

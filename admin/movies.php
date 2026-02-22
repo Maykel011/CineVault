@@ -75,7 +75,7 @@ $stats = $db->query($statsQuery)->fetch_assoc();
 </head>
 <body>
     <div class="admin-container">
-        <!-- Sidebar -->
+
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>CineVault</h1>

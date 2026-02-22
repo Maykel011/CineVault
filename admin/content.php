@@ -29,7 +29,6 @@ $content = $db->query("
 </head>
 <body>
     <div class="admin-container">
-        <!-- Sidebar (same as dashboard) -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>CineVault</h1>

@@ -100,7 +100,7 @@ $genres = $db->query($genresQuery);
 </head>
 <body>
     <div class="admin-container">
-        <!-- Sidebar -->
+
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>CineVault</h1>
@@ -298,7 +298,7 @@ $genres = $db->query($genresQuery);
     </div>
     
     <script>
-        // Modal functions
+        // Modal
         const addModal = document.getElementById('addModal');
         const editModal = document.getElementById('editModal');
         const closeBtns = document.querySelectorAll('.close-modal');

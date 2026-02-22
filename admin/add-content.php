@@ -23,7 +23,6 @@ $genres = $db->query("SELECT * FROM genres ORDER BY name");
 <body>
     <div class="admin-container">
         <aside class="sidebar">
-            <!-- Sidebar content same as dashboard -->
             <div class="sidebar-header">
                 <h1>CineVault</h1>
                 <p>Admin Panel</p>
@@ -185,7 +184,7 @@ $genres = $db->query("SELECT * FROM genres ORDER BY name");
                         </div>
                     </div>
                     
-                    <!-- Seasons Tab (for Series) -->
+                    <!-- Seasons Tab (this is for Series) -->
                     <div id="seasons-tab" class="tab-content">
                         <div id="seasons-container">
                             <div class="season-item">

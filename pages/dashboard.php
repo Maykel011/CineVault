@@ -36,8 +36,8 @@ $trialPercentage = ($trialDaysLeft / TRIAL_DAYS) * 100;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineVault - Your Dashboard</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-
- <!-- thsi is for user css  <link rel="stylesheet" href="../assets/css/userdashboard.css"> -->
+ <!-- thsi is for user dashbaord css sa assets css ang lalagay ng style hindi dito "Link only for user dashboard css" -->
+                 <!-- <link rel="stylesheet" href="../assets/css/userdashboard.css"> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
